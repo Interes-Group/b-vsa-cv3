@@ -40,5 +40,23 @@ public class Main {
             System.out.println(book1);
         }
 
+//        TypedQuery<Book> findByIdQuery = manager.createNamedQuery(Book.FIND_BY_ID, Book.class);
+//        // Ak nesetneme parameter id: Named parameter not bound : id
+//        findByIdQuery.setParameter("id", 2); // Parameter value [2] did not match expected type [java.lang.Long (n/a)]
+//        findByIdQuery.setParameter("id", 10L);
+//        // Pouzitie getSingleResult()
+//        try {
+//            Book book = findByIdQuery.getSingleResult();
+//        } catch (NoResultException noResultException) {
+//            ...
+//        } catch (NonUniqueResultException nonUniqueResultException) {
+//            ...
+//        }
+//        // Pouzitie getResultList()
+//        List<Book> book = findByIdQuery.getResultList();
+//        if (!book.isEmpty()) {...}
+//        // Pouzitie getResultStream()
+//        Optional<Book> book = findByIdQuery.getResultStream().findFirst();
+//        if (book.isPresent()) {...}
     }
 }

@@ -17,7 +17,11 @@ import javax.persistence.Id;
 @NamedQueries({
         @NamedQuery(name = Book.FIND_BY_ID, query = "select b from Book b where b.id = :id"),
         @NamedQuery(name = Book.FIND_BY_TITLE, query = "select b from Book b where b.title = :title")
+//      @NamedQuery(name = "Book.findById", query = "select b from Book where b.id = :id") - QueryException: Unable to resolve path [b.id], unexpected token [b] [select b from sk.stuba.fei.uim.vsa.cv2.Book where b.id = :id]
 })
+// Unsupported named query model. Please report the bug in Hibernate EntityManager
+//@org.hibernate.annotations.NamedNativeQuery(name = "Book.findAll", query = "select * from Book")
+
 public class Book {
     public static final String FIND_ALL = "Book.findAll";
     public static final String FIND_BY_ID = "Book.findById";
